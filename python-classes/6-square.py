@@ -33,6 +33,8 @@ class Square:
              or not all(isinstance(num, int) for num in value) \
              or value[0] < 0 or value[1] < 0:
             raise TypeError("position must be a tuple of 2 positive integers")
+        else:
+            self.__position = value
 
     """ Return the current square area """
     def area(self):
@@ -44,8 +46,8 @@ class Square:
             print()
         else:
             # Blank lines to adjust vertical position
-            for _ in range(self.__position[1]):
+            for index in range(self.__position[1]):
                 print()
             # Print each row, " " to adjust horizontal position
-            for _ in range(self.__size):
+            for index2 in range(self.__size):
                 print(" " * self.__position[0] + "#" * self.__size)
