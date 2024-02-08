@@ -5,8 +5,8 @@
 class Square:
     """ Define a square with its size """
     def __init__(self, size=0, position=(0, 0)):
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     @property
     def size(self):
@@ -38,16 +38,16 @@ class Square:
 
     """ Return the current square area """
     def area(self):
-        return self.__size * self.__size
+        return self.size * self.size
 
     """ Print the square with character : # """
     def my_print(self):
-        if self.__size == 0:
+        if self.size == 0:
             print()
         else:
             # Blank lines to adjust vertical position
-            for index in range(self.__position[1]):
+            for index in range(self.position[1]):
                 print()
             # Print each row, " " to adjust horizontal position
-            for index2 in range(self.__size):
-                print(" " * self.__position[0] + "#" * self.__size)
+            for index2 in range(self.size):
+                print(" " * self.position[0] + "#" * self.size)
