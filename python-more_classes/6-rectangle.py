@@ -3,7 +3,6 @@
 
 
 class Rectangle:
-    # Class variable
     number_of_instances = 0
 
     """ Define a rectangle with width and height """
