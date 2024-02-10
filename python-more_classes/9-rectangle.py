@@ -110,12 +110,8 @@ class Rectangle:
 
     @classmethod
     def square(cls, size=0):
-        """_summary_
-
+        """ Return a new rectangle with width and height equal to size
         Args:
-            size (int, optional): size of the square. Defaults to 0.
-
-        Returns:
-            Rectangle: rectangle with same width and height
+            size (int): size of the new rectangle
         """
         return cls(size, size)
