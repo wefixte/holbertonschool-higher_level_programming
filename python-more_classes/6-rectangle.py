@@ -1,8 +1,10 @@
 #!/usr/bin/python3
+
 """ Class Rectangle that defines a rectangle """
 
 
 class Rectangle:
+    """ Empty rectangle """
     number_of_instances = 0
 
     def __init__(self, width=0, height=0):
@@ -16,7 +18,6 @@ class Rectangle:
         self.width = width
         Rectangle.number_of_instances += 1
 
-    # height property and setter
     @property
     def height(self):
         return self.__height
@@ -37,7 +38,6 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         self.__height = value
 
-    # width property and setter
     @property
     def width(self):
         return self.__width
