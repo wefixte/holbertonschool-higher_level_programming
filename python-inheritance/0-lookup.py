@@ -3,9 +3,10 @@
 Define lookup function
 """
 
+
 def lookup(obj):
     """
-    Returns the list of available attributes and methods of an object 
+    Returns the list of available attributes and methods of an object
     Args :
         obj: object to loop up
     Return:
