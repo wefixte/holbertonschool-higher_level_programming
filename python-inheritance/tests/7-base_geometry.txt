@@ -73,6 +73,12 @@ Type Errors
     [TypeError] temperature must be an integer
 
     >>> try:
+    ...     bg.integer_validator("inf_float", 1e400)
+    ... except Exception as e:
+    ...     print("[{}] {}".format(e.__class__.__name__, e))
+    [TypeError] inf_float must be an integer
+
+    >>> try:
     ...     bg.integer_validator("width", [])
     ... except Exception as e:
     ...     print("[{}] {}".format(e.__class__.__name__, e))
