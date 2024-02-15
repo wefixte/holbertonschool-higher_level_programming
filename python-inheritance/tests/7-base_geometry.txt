@@ -31,10 +31,54 @@ Type Errors
     [TypeError] integer_validator() missing 1 required positional argument: 'value'
 
     >>> try:
+    ...     bg.integer_validator("length", None)
+    ... except Exception as e:
+    ...     print("[{}] {}".format(e.__class__.__name__, e))
+    [TypeError] length must be an integer
+
+
+    >>> try:
     ...     bg.integer_validator("age", "string")
     ... except Exception as e:
     ...     print("[{}] {}".format(e.__class__.__name__, e))
     [TypeError] age must be an integer
+
+    >>> try:
+    ...     bg.integer_validator("amount", "10")
+    ... except Exception as e:
+    ...     print("[{}] {}".format(e.__class__.__name__, e))
+    [TypeError] amount must be an integer
+
+    >>> try:
+    ...     bg.integer_validator("joke", 'Monty Python')
+    ... except Exception as e:
+    ...     print("[{}] {}".format(e.__class__.__name__, e))
+    [TypeError] joke must be an integer
+
+
+    >>> try:
+    ...     bg.integer_validator("inf_float", 1e400)
+    ... except Exception as e:
+    ...     print("[{}] {}".format(e.__class__.__name__, e))
+    [TypeError] inf_float must be an integer
+
+    >>> try:
+    ...     bg.integer_validator("depth", float('inf'))
+    ... except Exception as e:
+    ...     print("[{}] {}".format(e.__class__.__name__, e))
+    [TypeError] depth must be an integer
+
+    >>> try:
+    ...     bg.integer_validator("flag", True)
+    ... except Exception as e:
+    ...     print("[{}] {}".format(e.__class__.__name__, e))
+    [TypeError] flag must be an integer
+
+    >>> try:
+    ...     bg.integer_validator("precision", (4, ))
+    ... except Exception as e:
+    ...     print("[{}] {}".format(e.__class__.__name__, e))
+    [TypeError] precision must be an integer
 
     >>> try:
     ...     bg.integer_validator("width", [])
@@ -48,59 +92,7 @@ Type Errors
     ...     print("[{}] {}".format(e.__class__.__name__, e))
     [TypeError] height must be an integer
 
-    >>> try:
-    ...     bg.integer_validator("length", None)
-    ... except Exception as e:
-    ...     print("[{}] {}".format(e.__class__.__name__, e))
-    [TypeError] length must be an integer
 
-    >>> try:
-    ...     bg.integer_validator("size", 3.14)
-    ... except Exception as e:
-    ...     print("[{}] {}".format(e.__class__.__name__, e))
-    [TypeError] size must be an integer
-
-    >>> try:
-    ...     bg.integer_validator("quantity", True)
-    ... except Exception as e:
-    ...     print("[{}] {}".format(e.__class__.__name__, e))
-    [TypeError] quantity must be an integer
-
-    >>> try:
-    ...     bg.integer_validator("amount", "10")
-    ... except Exception as e:
-    ...     print("[{}] {}".format(e.__class__.__name__, e))
-    [TypeError] amount must be an integer
-
-    >>> try:
-    ...     bg.integer_validator("volume", 10.5)
-    ... except Exception as e:
-    ...     print("[{}] {}".format(e.__class__.__name__, e))
-    [TypeError] volume must be an integer
-
-    >>> try:
-    ...     bg.integer_validator("depth", float('inf'))
-    ... except Exception as e:
-    ...     print("[{}] {}".format(e.__class__.__name__, e))
-    [TypeError] depth must be an integer
-
-    >>> try:
-    ...     bg.integer_validator("temperature", float('nan'))
-    ... except Exception as e:
-    ...     print("[{}] {}".format(e.__class__.__name__, e))
-    [TypeError] temperature must be an integer
-
-    >>> try:
-    ...     bg.integer_validator("points", "1234")
-    ... except Exception as e:
-    ...     print("[{}] {}".format(e.__class__.__name__, e))
-    [TypeError] points must be an integer
-
-    >>> try:
-    ...     bg.integer_validator("flag", True)
-    ... except Exception as e:
-    ...     print("[{}] {}".format(e.__class__.__name__, e))
-    [TypeError] flag must be an integer
 
 
 Value Errors
