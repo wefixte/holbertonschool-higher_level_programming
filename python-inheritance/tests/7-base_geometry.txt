@@ -102,6 +102,18 @@ Type Errors
     ...     print("[{}] {}".format(e.__class__.__name__, e))
     [TypeError] flag must be an integer
 
+    >>> try:
+    ...     bg.integer_validator(123, 10)
+    ... except Exception as e:
+    ...     print("[{}] {}".format(e.__class__.__name__, e))
+    [TypeError] name must be a string
+
+    >>> try:
+    ...     bg.integer_validator("", 10)
+    ... except Exception as e:
+    ...     print("[{}] {}".format(e.__class__.__name__, e))
+    [ValueError] name cannot be empty
+
 
 Value Errors
 ============
