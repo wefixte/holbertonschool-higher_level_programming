@@ -114,6 +114,12 @@ Type Errors
     ...     print("[{}] {}".format(e.__class__.__name__, e))
     [TypeError] length must be an integer
 
+    >>> try:
+    ...     bg.integer_validator("Thing", object)
+    ... except Exception as e:
+    ...     print("[{}] {}".format(e.__class__.__name__, e))
+    [TypeError] Thing must be an integer
+
 
 Value Errors
 ============
