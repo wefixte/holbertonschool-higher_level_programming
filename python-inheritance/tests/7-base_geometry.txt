@@ -43,7 +43,7 @@ Type Errors
     [TypeError] amount must be an integer
 
     >>> try:
-    ...     bg.integer_validator("points", "1234")
+    ...     bg.integer_validator("points", '1234')
     ... except Exception as e:
     ...     print("[{}] {}".format(e.__class__.__name__, e))
     [TypeError] points must be an integer
