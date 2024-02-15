@@ -91,6 +91,12 @@ Type Errors
     [TypeError] height must be an integer
 
     >>> try:
+    ...     bg.integer_validator("name", (4, ))
+    ... except Exception as e:
+    ...     print("[{}] {}".format(e.__class__.__name__, e))
+    [TypeError] name must be an integer
+
+    >>> try:
     ...     bg.integer_validator("quantity", True)
     ... except Exception as e:
     ...     print("[{}] {}".format(e.__class__.__name__, e))
