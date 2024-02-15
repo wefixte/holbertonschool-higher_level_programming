@@ -36,7 +36,6 @@ Type Errors
     ...     print("[{}] {}".format(e.__class__.__name__, e))
     [TypeError] length must be an integer
 
-
     >>> try:
     ...     bg.integer_validator("age", "string")
     ... except Exception as e:
@@ -54,7 +53,6 @@ Type Errors
     ... except Exception as e:
     ...     print("[{}] {}".format(e.__class__.__name__, e))
     [TypeError] joke must be an integer
-
 
     >>> try:
     ...     bg.integer_validator("inf_float", 1e400)
@@ -97,7 +95,6 @@ Type Errors
     ... except Exception as e:
     ...     print("[{}] {}".format(e.__class__.__name__, e))
     [TypeError] weight must be an integer
-
 
     >>> try:
     ...     bg.integer_validator(123, 10)
