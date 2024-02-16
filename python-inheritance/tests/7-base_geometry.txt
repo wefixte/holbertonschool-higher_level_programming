@@ -96,7 +96,7 @@ Type Errors
     [TypeError] width must be an integer
 
     >>> try:
-    ...     bg.integer_validator("height", {})
+    ...     bg.integer_validator("height", {4, 3})
     ... except Exception as e:
     ...     print("[{}] {}".format(e.__class__.__name__, e))
     [TypeError] height must be an integer
